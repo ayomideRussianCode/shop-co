@@ -3,17 +3,17 @@ import { FaTwitter, FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-[#f0f0f0] mt-20">
-      <div className="bg-black text-white rounded-3xl mx-4 sm:mx-8 md:mx-20 lg:mx-40 -translate-y-1/2 p-6 sm:p-10 text-center flex flex-col gap-6 items-center">
+      <div className="bg-black text-white rounded-3xl mx-4 sm:mx-8 md:mx-20 lg:mx-40 -translate-y-1/2 p-6 sm:p-10 text-center flex grid-col gap-6 items-center">
         <h2 className="text-2xl sm:text-3xl font-bold">
           STAY UPTO DATE ABOUT OUR LATEST OFFERS
         </h2>
-        <div className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-xl">
+        <div className=" flex-row items-center gap-4 w-full max-w-xl">
           <input
             type="email"
             placeholder="Enter your email address"
-            className="px-4 py-3 rounded-full w-full text-black outline-none"
+            className="px-4 py-3  mb-4 rounded-full w-full text-black outline-none"
           />
-          <button className="bg-white text-black px-6 py-3 rounded-full font-semibold">
+          <button className="bg-white w-full text-black px-6 py-3 rounded-full font-semibold">
             Subscribe to Newsletter
           </button>
         </div>

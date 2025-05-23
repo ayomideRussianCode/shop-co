@@ -4,7 +4,7 @@ export default function BrowseByDressStyle() {
   const categories = [
     {
       id: 1,
-      name: 'Casual',
+      name:'Casual',
       image: '/casual.svg',
     },
     {
@@ -19,6 +19,7 @@ export default function BrowseByDressStyle() {
     },
     {
       id: 4,
+      name: 'Gym',
       image: '/gym.svg',
     },
   ];
@@ -27,17 +28,17 @@ export default function BrowseByDressStyle() {
     <div className="bg-gray-100 rounded-3xl py-8 px-6 sm:py-10 sm:px-8 md:px-12 my-12 max-w-6xl mx-auto">
       <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">BROWSE BY DRESS STYLE</h2>
       
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-        <div className="col-span-1">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className=" ">
           <CategoryCard category={categories[0]} />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-2">
           <CategoryCard category={categories[1]} />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-2">
           <CategoryCard category={categories[2]} />
         </div>
-        <div className="col-span-1">
+        <div className="">
           <CategoryCard category={categories[3]} />
         </div>
       </div>
@@ -48,11 +49,11 @@ export default function BrowseByDressStyle() {
 function CategoryCard({ category }) {
   return (
     <div className="relative bg-white rounded-xl overflow-hidden cursor-pointer group h-full">
-      <div className="aspect-[4/3] overflow-hidden h-full">
+      <div className="aspect-[5/3] overflow-hidden h-full">
         <img
           src={category.image}
           alt={`${category.name} fashion`}
-          className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-full object-fit object-center transition-transform duration-300 group-hover:scale-105"
         />
       </div>
       
