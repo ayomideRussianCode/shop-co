@@ -6,6 +6,10 @@ import MobileMenu from "./MobileMenu";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const handleSearch = () => {
+    console.log("Search for:", searchTerm);
+  };
 
   return (
     <header className="w-full bg-white shadow-sm z-40 ">
@@ -32,14 +36,19 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
           <div className="md:hidden">
             {isMobileSearchOpen ? (
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  autoFocus
-                  className="w-40 rounded-full pl-8 pr-4 py-1.5 text-sm bg-gray-100 text-gray-700 focus:outline-none transition duration-300 ease-in-out"
-                />
-                <FiSearch className="absolute top-1/2 left-2 -translate-y-1/2 text-gray-400" />
+              <div className="relative flex items-center space-x-2">
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                    autoFocus
+                    className="w-40 rounded-full pl-8 pr-4 py-1.5 text-sm bg-gray-100 text-gray-700 focus:outline-none transition duration-300 ease-in-out"
+                  />
+                  <FiSearch className="absolute top-1/2 left-2 -translate-y-1/2 text-gray-400" />
+                </div>
               </div>
             ) : (
               <button
@@ -60,6 +69,9 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search for products..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
               className="w-96 border rounded-full pl-10 pr-4 py-2 text-sm bg-gray-100 text-gray-700 focus:outline-none"
             />
             <FiSearch className="absolute top-0.5 left-4 translate-y-1/2 text-gray-400 text-lg" />
