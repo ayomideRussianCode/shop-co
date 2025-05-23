@@ -17,7 +17,6 @@ const Hero = ({ modelImage }) => {
 
   return (
     <div className="w-full font-sans">
-      {/* HERO SECTION */}
       <div
         className="relative w-full bg-cover bg-center text-black"
         style={{
@@ -29,17 +28,16 @@ const Hero = ({ modelImage }) => {
         <img
           src="/small-star.svg"
           alt="star"
-          className="absolute bottom-4 left-[-40] top-20 w-10 h-10"
+          className="absolute left-80 top-40 w-10 h-10"
         />
         <img
           src="/big-star.svg"
           alt="star"
-          className="absolute top-1/3 right-4 w-12 h-12"
+          className="absolute right-10 w-12 h-12"
         />
        
         <div className="bg-white/80 md:bg-white/70 w-full h-full">
           <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 py-12 md:py-20">
-            {/* LEFT TEXT */}
             <div className="max-w-xl">
               <h1 className="text-4xl md:text-5xl font-black mb-4 leading-tight">
                 FIND CLOTHES
@@ -57,8 +55,8 @@ const Hero = ({ modelImage }) => {
               <button className="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors">
                 Shop Now
               </button>
+              
 
-              {/* Stats */}
               <div className="flex flex-wrap gap-8 mt-8">
                 {stats.map((stat, index) => (
                   <div key={index} className="flex flex-col">
@@ -72,9 +70,8 @@ const Hero = ({ modelImage }) => {
         </div>
       </div>
 
-      {/* BRANDS SCROLLER */}
       <div className="w-full bg-black text-white py-4 px-6">
-        <div className="flex justify-between items-center overflow-x-auto">
+        <div className="flex justify-between items-center overflow-x-auto ">
           {brands.map((brand, index) => (
             <div key={index} className="px-4 whitespace-nowrap">
               <img

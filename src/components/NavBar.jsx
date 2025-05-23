@@ -24,7 +24,7 @@ const Navbar = () => {
           >
             <FiMenu size={22} />
           </button>
-          <img src="/shopco.svg" alt="logo" />
+          <img src="/shopco.svg" alt="logo"/>
         </div>
         <nav className="hidden md:flex space-x-6 text-gray-700 font-medium">
           <a href="#">Shop</a>
