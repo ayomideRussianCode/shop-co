@@ -10,28 +10,33 @@ function ProductDetail() {
   const sizes = ["Small", "Medium", "Large", "X-Large"];
 
   return (
-    <div className="max-w-7xl mx-auto p-4 grid grid-cols-1  lg:grid:grid-cols-2 gap-8">
-      {/* images section */}
-     
-        <div className="flex-1">
-          <img src="/sample4.svg" alt="main" />
+    <div className=" mx-auto p-4 grid grid-cols-1 ">
+       <div className=" flex-col items-center justify-center lg:flex-row gap-4 ">
+          <div className="">
+            <img src="/sample4.svg" alt="main" />
+          </div>
+
+      <div className=" w-full flex flex-row lg:flex-col justify-around gap-4 my-4">
+        <img
+          src="/sample3.svg"
+          alt="thumb"
+          className="w-40  rounded-lg object-cover "
+        />
+        <img
+          src="/sample3.svg"
+          alt="thumb"
+          className="w-40 rounded-lg object-cover "
+        />
+        <img
+          src="/sample3.svg"
+          alt="thumb"
+          className="w-40 rounded-lg object-cover "
+        />
         </div>
 
-         <div className="flex flex-col lg:flex-row gap-4 ">
-        <div className="flex flex-row items-center justify-center lg:flex-row gap-4">
-          {[1, 2, 3].map((image, index) => (
-            <img
-              key={index}
-              src="/sample3.svg"
-              alt="thumb"
-              className="w-20 h-24 rounded-lg object-cover cursor-pointer"
-            />
-          ))}
-        </div>
-
-        {/* product info */}
-        <div>
-          <h1 className="text-2xl md:text-4xl font-bold mb-2">
+         
+        <div >
+          <h1 className="text-2xl flex flex-col md:text-4xl font-bold mb-2">
             ONE LIFE GRAPHIC T-SHIRT
           </h1>
           <div className="flex items-center gap-1 text-yellow-500">
@@ -59,7 +64,7 @@ function ProductDetail() {
         <hr />
 
         <div className="mb-4">
-            <h4 className="font-medium text-gray-400 mb-2">Select Colors</h4>
+          <h4 className="font-medium text-gray-400 mb-2">Select Colors</h4>
           <div className="flex gap-2">
             {colors.map((color) => (
               <button
@@ -101,16 +106,16 @@ function ProductDetail() {
           <div className="flex items-center border rounded-full px-4 py-2">
             <button
               onClick={() =>
-                setQuantity((quantity) => Math.max(1, quantity - 1))
+                setQuantity((q) => Math.max(1, q - 1))
               }
             >
               <FaMinus size={12} />
             </button>
-            <button onClick={() => setQuantity((quantity) => quantity + 1)}>
+            <button onClick={() => setQuantity((q) => q + 1)}>
               <FaPlus size={12} />
             </button>
           </div>
-          <button className="bg-black text-white px-8 py-3 rounded-full w-full sm:w-24 ">
+          <button className="bg-black text-white px-8 py-3 rounded-full lg:w-96 w-full sm:w-24 ">
             Add to Cart
           </button>
         </div>

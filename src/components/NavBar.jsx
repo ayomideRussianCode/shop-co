@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full bg-white shadow-sm z-40 ">
+    <header className="w-full bg-white z-40 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
         <div className="flex items-center space-x-4">
           <button
@@ -26,7 +26,7 @@ const Navbar = () => {
           </button>
           <img src="/shopco.svg" alt="logo"/>
         </div>
-        <nav className="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <nav className="hidden  md:flex space-x-6 text-gray-700 font-medium">
           <a href="#">Shop</a>
           <a href="#">On Sale</a>
           <a href="#">New Arrivals</a>
@@ -83,6 +83,7 @@ const Navbar = () => {
           <MobileMenu onClose={() => setIsMobileMenuOpen(false)} />
         )}
       </div>
+      <hr />
     </header>
   );
 };
