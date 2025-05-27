@@ -111,6 +111,7 @@ function ProductDetail() {
             >
               <FaMinus size={12} />
             </button>
+            <span className="mx-4">{quantity}</span>
             <button onClick={() => setQuantity((q) => q + 1)}>
               <FaPlus size={12} />
             </button>
