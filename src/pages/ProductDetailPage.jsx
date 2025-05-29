@@ -3,7 +3,7 @@ import Navbar from "../components/NavBar";
 import ProductDetail from "../components/ProductDetail";
 // import ProductCollection from '../components/ProductCollection';
 import CustomersTestimonials from "../components/CustomersTestimonial";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import TopBar from "../components/TopBar";
 
 function ProductDetailPage() {
@@ -21,7 +21,7 @@ function ProductDetailPage() {
       <ProductDetail/>
       <CustomersTestimonials/>
       {/* <ProductCollection/> */}
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }

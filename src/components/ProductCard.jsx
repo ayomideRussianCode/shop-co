@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import StarIcon from "../components/StarIcon";
 export default function ProductCard({ product }) {
   return (
-    <Link to={`../pages/ProductDetailPage.jsx/${product.id}`}>
+    <Link to={`/product-detail/${product.id}`}>
       <div className="group">
         <div
           className={`relative bg-gray-100 rounded-2xl mb-3 aspect-[3/4] overflow-hidden`}
