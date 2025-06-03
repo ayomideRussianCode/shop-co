@@ -23,7 +23,7 @@ const Hero = () => {
             <h1 className=" text-4xl lg:text-5xl font-Satoshi md:font-IntegralBold font-black mb-4">
               FIND CLOTHES THAT MATCHES YOUR STYLE
             </h1>
-            <p className="text-sm font-Poppins text-[#000000] mb-6">
+            <p className="text-sm text-[#000000] mb-6">
               Browse through our diverse range of meticulously crafted garments,
               designed to bring out your individuality and cater to your sense
               of style.
