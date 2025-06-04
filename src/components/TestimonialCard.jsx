@@ -1,8 +1,9 @@
 import StarIcon from "../components/StarIcon";
+import {FaCheckCircle} from 'react-icons/fa';
 function TestimonialCard({ name, verified = true, rating = 5, text }) {
   return (
     <div>
-      <div className="border border-gray-200 rounded-lg p-5 transition-shadow">
+      <div className="border border-gray-200 rounded-lg p-5  mb-10 transition-shadow">
         <div className="flex flex-col space-y-2">
           <div className="flex space-x-1">
             {Array(5)
@@ -14,10 +15,10 @@ function TestimonialCard({ name, verified = true, rating = 5, text }) {
           <div className="flex ">
             {name}
             {verified && (
-              <span
-                className="ml-1 text-green-600"
+              <FaCheckCircle
+                className=" ml-1 text-green-600"
                 title="Verified buyer"
-              ></span>
+              />
             )}
           </div>
           <span>{text}</span>
