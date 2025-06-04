@@ -1,9 +1,10 @@
 import Breadcrumbs from "../components/Breadcrumbs";
 import Navbar from "../components/NavBar";
 import ProductDetail from "../components/ProductDetail";
-// import ProductCollection from '../components/ProductCollection';
 import CustomersTestimonials from "../components/CustomersTestimonial";
-// import Footer from "../components/Footer";
+import ProductsSection from "../components/ProductsSection";
+import { products } from "../data/ProductsData";
+import Footer from "../components/Footer";
 import TopBar from "../components/TopBar";
 
 function ProductDetailPage() {
@@ -20,8 +21,9 @@ function ProductDetailPage() {
       <Breadcrumbs items={breadcrumbs} />
       <ProductDetail/>
       <CustomersTestimonials/>
+       <ProductsSection title="YOU MIGHT ALSO LIKE" products={products} />
       {/* <ProductCollection/> */}
-      {/* <Footer/> */}
+      <Footer/>
     </>
   );
 }

@@ -8,7 +8,7 @@ export const newArrivalsData = [
     rating: 4.5,
     ratingCount: "4.5/5",
     image: "/newarrival1.svg",
-    isSelected: true
+    isSelected: false
   },
   {
     id: 2,
@@ -88,6 +88,53 @@ export const topSellingData = [
     rating: 4.5,
     ratingCount: "4.5/5",
     image: "/topselling4.svg",
+    isSelected: false
+  }
+];
+
+export const products = [
+  {
+    id: 9,
+    name: "Polo with Contrast Trims",
+    price: 212,
+    originalPrice: 242,
+    discount: 0,
+    rating: 4.0,
+    ratingCount: "4.0/5",
+    image: "/product1.png",
+    isSelected: false
+  },
+  {
+    id: 10,
+    name: "Gradient Graphic T-shirt",
+    price: 145,
+    originalPrice: null,
+    discount: 0,
+    rating: 3.5,
+    ratingCount: "3.5/5",
+    image: "/product2.png",
+    isSelected: false
+  },
+  {
+    id: 11,
+    name: "Polo with Tipping Details",
+    price: 180,
+    originalPrice: null,
+    discount: 0,
+    rating: 4.5,
+    ratingCount: "4.5/5",
+    image: "/product3.png",
+    isSelected: false
+  },
+  {
+    id: 12,
+    name: "Black Striped T-shirt",
+    price: 120,
+    originalPrice: 150,
+    discount: 30,
+    rating: 5,
+    ratingCount: "5.0/5",
+    image: "/product4.png",
     isSelected: false
   }
 ];
