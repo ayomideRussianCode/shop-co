@@ -75,6 +75,18 @@ function Footer() {
 
 export default Footer;
 
+
+
+
+
+
+
+
+
+
+
+
+
 // import { FaTwitter, FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
 
 // function Footer() {

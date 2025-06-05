@@ -1,3 +1,4 @@
+import React from "react";
 import homepageImg from "../../public/homepage-img.jpg";
 
 const Hero = () => {
@@ -34,10 +35,22 @@ const Hero = () => {
             <div>
               <div className="flex gap-8 mt-8">
                 {stats.map((stat, index) => (
-                  <div key={index} className="flex flex-col">
-                    <span className="text-2xl font-bold">{stat.count}</span>
-                    <span className="text-xs text-gray-600">{stat.label}</span>
-                  </div>
+                  <React.Fragment key={index}>
+                    <div className="flex flex-col items-center text-center">
+                      <span className="text-2xl font-bold">{stat.count}</span>
+                      <span className="text-xs text-gray-600">
+                        {stat.label}
+                      </span>
+                    </div>
+
+                    {index < stats.length - 1 && (
+                      <img
+                        src="/vertical-line.svg"
+                        alt="vertical-line"
+                        className="h-10 w-auto self-center"
+                      />
+                    )}
+                  </React.Fragment>
                 ))}
               </div>
             </div>
@@ -54,7 +67,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
 
       <div className="w-full">
         <div className="bg-black text-white py-6 px-4">
