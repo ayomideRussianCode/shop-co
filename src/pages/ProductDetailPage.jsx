@@ -1,7 +1,7 @@
 import Breadcrumbs from "../components/Breadcrumbs";
 import Navbar from "../components/NavBar";
 import ProductDetail from "../components/ProductDetail";
-import CustomersTestimonials from "../components/CustomersTestimonial";
+import Reviews from "../components/Reviews";
 import ProductsSection from "../components/ProductsSection";
 import { products } from "../data/ProductsData";
 import Footer from "../components/Footer";
@@ -20,7 +20,7 @@ function ProductDetailPage() {
       <Navbar />
       <Breadcrumbs items={breadcrumbs} />
       <ProductDetail/>
-      <CustomersTestimonials/>
+      <Reviews/>
        <ProductsSection title="YOU MIGHT ALSO LIKE" products={products} />
       {/* <ProductCollection/> */}
       <Footer/>

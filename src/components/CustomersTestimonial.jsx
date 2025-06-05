@@ -7,14 +7,20 @@ import { testimonials } from "../data/Testimonials";
 export default function CustomersTestimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const visibleCards = 3;
+
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+      prevIndex === 0
+        ? Math.max(testimonials.length - visibleCards, 0)
+        : prevIndex - 1
     );
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    setCurrentIndex((prevIndex) =>
+      prevIndex + visibleCards >= testimonials.length ? 0 : prevIndex + 1
+    );
   };
 
   return (
@@ -30,12 +36,20 @@ export default function CustomersTestimonial() {
           </button>
         </div>
       </div>
-      <div className="">
-        {testimonials.length > 0 && (
-          <TestimonialCard {...testimonials[currentIndex]} />
-        )}
+      <div className="w-full overflow-x-auto">
+        <div className="flex gap-4 min-w-full">
+          {testimonials
+            .slice(currentIndex, currentIndex + visibleCards)
+            .map((testimonial, index) => (
+              <div
+                key={index}
+                className="min-w-[300px] max-w-[300px] flex-shrink-0"
+              >
+                <TestimonialCard {...testimonial} />
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );
 }
-
