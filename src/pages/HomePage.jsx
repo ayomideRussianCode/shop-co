@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import ProductCollection from "../components/ProductCollection";
 import BrowseByStyle from "../components/BrowseByStyle";
 import CustomerTestimonials from "../components/CustomersTestimonial";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 
 function HomePage() {
   return (
@@ -16,7 +16,7 @@ function HomePage() {
       <ProductCollection />
       <BrowseByStyle />
       <CustomerTestimonials />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
