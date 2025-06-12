@@ -9,14 +9,14 @@ function TestimonialCard({ name, verified = true, rating = 5, text }) {
             {Array(5)
               .fill(0)
               .map((_, i) => (
-                <StarIcon key={i} filled={i < rating} />
+                <StarIcon key={i} filled={i < rating}/>
               ))}
           </div>
           <div className="flex ">
             {name}
             {verified && (
               <FaCheckCircle
-                className=" ml-1 text-green-600"
+                className=" ml-1 mt-1 text-green-600"
                 title="Verified buyer"
               />
             )}

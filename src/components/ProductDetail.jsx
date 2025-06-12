@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import StarIcon from "../components/StarIcon";
 import { FaMinus, FaPlus, FaCheck } from "react-icons/fa";
 
-function ProductDetail() {
+function ProductDetail({ rating = 5 }) {
   const [selectedColor, setSelectedColor] = useState("olive");
   const [selectedSize, setSelectedSize] = useState("Large");
   const [quantity, setQuantity] = useState(1);
   const colors = ["#4F4631", "#314F4A", "#31344F"];
+  const [mainImage, setMainImage] = useState("/main.png");
 
   const sizes = ["Small", "Medium", "Large", "X-Large"];
 
@@ -15,42 +16,40 @@ function ProductDetail() {
       <div className="w-full lg:w-1/2">
         <div className="flex flex-col-reverse lg:flex-row gap-4 overflow-x-auto">
           <div className="flex flex-row lg:flex-col overflow-auto px-14 py-4 gap-4 lg:overflow-visible">
-            <img
-              src="/thumb1.png"
-              alt="thumb"
-              className="w-36 h-36 rounded-lg object-cover"
-            />
-            <img
-              src="/thumb2.png"
-              alt="thumb"
-              className="w-36 h-36 rounded-lg object-cover"
-            />
-            <img
-              src="/thumb3.png"
-              alt="thumb"
-              className="w-36 h-36 rounded-lg object-cover"
-            />
+            {["/thumb1.png", "/thumb2.png", "/thumb3.png"].map((img, i) => (
+              <img
+                key={i}
+                src={img}
+                alt={`thumb-${i}`}
+                onClick={() => setMainImage(img)}
+                className={`w-36 h-36 flex-shrink-0 rounded-lg object-cover cursor-pointer border-2 ${
+                  mainImage === img ? "border-black" : "border-transparent"
+                }`}
+              />
+            ))}
           </div>
 
-          <div className="flex-1 mx-4 my-4 flex justify-center">
+          <div className="flex-1 flex mt-4 lg:mr-6 justify-center">
             <img
-              className="rounded-lg w-full p-4"
-              src="/main.png"
+              className="rounded-lg w-[300px] h-[345px] flex-shrink-0   "
+              src={mainImage}
               alt="main-img"
             />
           </div>
         </div>
       </div>
+
       <div className="w-full lg:w-1/2 bg-white">
         <div className="px-4">
           <h1 className="lg:text-2xl font-IntegralBold mb-2 ">
             ONE LIFE GRAPHIC T-SHIRT
           </h1>
           <div className="flex items-center gap-1 text-yellow-500">
-            {[1, 2, 3, 4].map((_, i) => (
-              <AiFillStar key={i} />
-            ))}
-            <AiOutlineStar />
+            {Array(5)
+              .fill(0)
+              .map((_, i) => (
+                <StarIcon key={i} filled={i < rating} />
+              ))}
             <span className="ml-2 text-black text-sm">4.5/5</span>
           </div>
           <div className="flex items-center gap-4 my-2">

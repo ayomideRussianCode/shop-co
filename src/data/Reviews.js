@@ -1,45 +1,56 @@
  export const reviews = [
-
     {
       id: 1,
-      name: "Sarah M.",
-      rating: 5,
+      name: "Samantha D.",
+      rating: 4.5,
       verified: true,
-      text: "I'm really impressed with the quality of these clothes. I received from ShopCo. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+      review:
+        "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+      date: "Posted on August 14, 2023",
     },
     {
       id: 2,
-      name: "Alex K.",
-      rating: 5,
+      name: "Alex M.",
+      rating: 4,
       verified: true,
-      text: "Finding clothes that fit my body type used to be a challenge until I discovered ShopCo. The range of options they offer is truly remarkable, catering to a variety of tastes and preferences.",
+      review:
+        "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me.",
+      date: "Posted on August 15, 2023",
     },
     {
       id: 3,
-      name: "James L.",
-      rating: 5,
+      name: "Ethan R.",
+      rating: 3.5,
       verified: true,
-      text: "As someone who values both style and ethical fashion pieces, I'm thrilled to have stumbled upon ShopCo. The selection of clothes is not only diverse but also on-point with the latest trends.",
+      review:
+        "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.",
+      date: "Posted on August 16, 2023",
     },
     {
       id: 4,
-      name: "Megan S.",
-      rating: 5,
+      name: "Olivia P.",
+      rating: 4,
       verified: true,
-      text: "The customer service at ShopCo is exceptional. They were incredibly helpful when I needed to exchange an item, making the process smooth and hassle-free.",
-    },
-      {
-      id: 3,
-      name: "James L.",
-      rating: 5,
-      verified: true,
-      text: "As someone who values both style and ethical fashion pieces, I'm thrilled to have stumbled upon ShopCo. The selection of clothes is not only diverse but also on-point with the latest trends.",
+      review:
+        "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
+      date: "Posted on August 17, 2023",
     },
     {
-      id: 4,
-      name: "Megan S.",
-      rating: 5,
+      id: 5,
+      name: "Liam K.",
+      rating: 4,
       verified: true,
-      text: "The customer service at ShopCo is exceptional. They were incredibly helpful when I needed to exchange an item, making the process smooth and hassle-free.",
+      review:
+        "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion.",
+      date: "Posted on August 18, 2023",
+    },
+    {
+      id: 6,
+      name: "Ava H.",
+      rating: 4.5,
+      verified: true,
+      review:
+        "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter.",
+      date: "Posted on August 19, 2023",
     },
   ];

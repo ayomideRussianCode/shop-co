@@ -1,31 +1,55 @@
+import { MoreHorizontal } from "lucide-react";
+import { reviews } from "../data/Reviews";
+import StarIcon from "./StarIcon";
+import { FaCheckCircle } from "react-icons/fa";
+export default function RatingReviewSection({rating = 5}) {
+  return (
+    <div className="max-w-6xl mx-auto p-6 bg-white">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        {reviews.map((review) => (
+          <div
+            key={review.id}
+            className="border border-gray-200 rounded-lg p-4 bg-white"
+          >
+            <div className="flex items-start justify-between mb-4">
+              <div className="flex space-x-1">
+                {Array(5)
+                  .fill(0)
+                  .map((_, i) => (
+                    <StarIcon key={i} filled={i < rating} />
+                  ))}
+              </div>{" "}
+              <button className="text-gray-400 hover:text-gray-600">
+                <MoreHorizontal className="w-5 h-5" />
+              </button>
+            </div>
 
-// function Reviews() {
-//   return (
-//     <div>
-//       <div className="flex flex-col">
-//         <ul className="flex justify-between px-10 mx-64 gap-6 font-medium text-black">
-//           <li>Product Details</li>
-//           <li>Ratings & Reviews</li>
-//           <li>FAQs</li>
-//         </ul>
-//       </div>
-//       <hr className="mt-4" />
+            <div className="flex items-center mb-3">
+              <span className="font-semibold text-gray-900">{review.name}</span>
+              {review.verified && (
+                <div className="flex">
+                  <FaCheckCircle
+                    className=" ml-1 mt-1  text-green-600"
+                    title="Verified buyer"
+                  />
+                </div>
+              )}
+            </div>
 
-//       <div className="flex mx-56 my-8">
-//         <div className="w-1/2">
-//           <h2>All Reviews</h2>
-//         </div>
-//         <div className="w-1/2">
-//           <div className="flex">
-//             <button className="px-6 py-2 bg-gray-300 rounded-full">Latest</button>
-//             <button className="bg-black text-white rounded-full px-6 py-2">
-//               Write a Review
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+            <p className="text-gray-700 text-sm leading-relaxed mb-4">
+              "{review.review}"
+            </p>
 
-// export default Reviews;
+            <p className="text-gray-500 text-sm">{review.date}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex justify-center">
+        <button className="px-8 py-3 border border-gray-300 rounded-full text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+          Load More Reviews
+        </button>
+      </div>
+    </div>
+  );
+}

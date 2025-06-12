@@ -1,11 +1,11 @@
 import Breadcrumbs from "../components/Breadcrumbs";
 import Navbar from "../components/NavBar";
 import ProductDetail from "../components/ProductDetail";
-// import Reviews from "../components/Reviews";
 import ProductsSection from "../components/ProductsSection";
 import { products } from "../data/ProductsData";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 import TopBar from "../components/TopBar";
+import RatingReviewSection from "../components/RatingReviewSection";
 
 function ProductDetailPage() {
   const breadcrumbs = [
@@ -20,10 +20,10 @@ function ProductDetailPage() {
       <Navbar />
       <Breadcrumbs items={breadcrumbs} />
       <ProductDetail/>
-      {/* <Reviews/> */}
+      <RatingReviewSection/>
        <ProductsSection title="YOU MIGHT ALSO LIKE" products={products} />
       {/* <ProductCollection/> */}
-      {/* <Footer/> */}
+      <Footer/>
     </>
   );
 }
