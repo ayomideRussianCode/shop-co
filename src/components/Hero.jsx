@@ -57,13 +57,14 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="">
+        <div className="relative">
           <div className="h-[523px]">
             <img
               className="w-full h-full object-cover"
               src={homepageImg}
               alt="models"
             />
+            {/* <img className="absolute top-30" src="/big-star.svg" alt="" /> */}
           </div>
         </div>
       </div>

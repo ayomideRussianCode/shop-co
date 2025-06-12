@@ -47,7 +47,7 @@ function ProductDetail({ rating = 5 }) {
           <div className="flex items-center gap-1 text-yellow-500">
             {Array(5)
               .fill(0)
-              .map((_, i) => (
+              .map(( i) => (
                 <StarIcon key={i} filled={i < rating} />
               ))}
             <span className="ml-2 text-black text-sm">4.5/5</span>

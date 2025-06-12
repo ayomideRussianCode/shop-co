@@ -8,7 +8,7 @@ function TestimonialCard({ name, verified = true, rating = 5, text }) {
           <div className="flex space-x-1">
             {Array(5)
               .fill(0)
-              .map((_, i) => (
+              .map((i) => (
                 <StarIcon key={i} filled={i < rating}/>
               ))}
           </div>

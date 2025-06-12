@@ -5,9 +5,9 @@ function Footer() {
   return (
     <>
       <NewsLetter />
-      <footer className="bg-gray-100 px-6 py-12 text-sm text-gray-700">
+      <footer className="bg-gray-100 pt-[80px] px-6 py-12 text-sm text-gray-700">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
-          <div className="flex flex-col gap-4 max-w-xs">
+          <div className="flex flex-col gap-4 max-w-xs ">
             <h1 className="text-xl font-IntegralBold text-black">SHOP.CO</h1>
             <p className="text-sm leading-5 text-gray-600">
               We have clothes that suits your style and which you’re proud to
@@ -51,7 +51,7 @@ function Footer() {
               },
             ].map((section) => (
               <div key={section.title} className="min-w-[120px]">
-                <h4 className="font-semibold mb-3 text-black">
+                <h4 className="font-semibold mb-3 text-transform: uppercase text-black">
                   {section.title}
                 </h4>
                 <ul className="space-y-2">
