@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import StarIcon from "../components/StarIcon";
-import { FaMinus, FaPlus, FaCheck } from "react-icons/fa";
+import { FaMinus, FaPlus } from "react-icons/fa";
+import SelectSize from "../components/SelectSize";
+import SelectColors from "../components/SelectColors";
+import Button from "../components/Button";
 
 function ProductDetail({ rating = 5 }) {
-  const [selectedColor, setSelectedColor] = useState("olive");
-  const [selectedSize, setSelectedSize] = useState("Large");
   const [quantity, setQuantity] = useState(1);
   const colors = ["#4F4631", "#314F4A", "#31344F"];
   const [mainImage, setMainImage] = useState("/main.png");
-
   const sizes = ["Small", "Medium", "Large", "X-Large"];
 
   return (
@@ -47,7 +47,7 @@ function ProductDetail({ rating = 5 }) {
           <div className="flex items-center gap-1 text-yellow-500">
             {Array(5)
               .fill(0)
-              .map(( i) => (
+              .map((i) => (
                 <StarIcon key={i} filled={i < rating} />
               ))}
             <span className="ml-2 text-black text-sm">4.5/5</span>
@@ -64,46 +64,15 @@ function ProductDetail({ rating = 5 }) {
             a soft and breathable fabric, it offers superior comfort and style.
           </p>
           <hr />
-
           <div className="mb-4">
             <h4 className="font-medium text-gray-400 my-4 mb-2">
               Select Colors
             </h4>
-            <div className="flex gap-2">
-              {colors.map((color) => (
-                <button
-                  key={color}
-                  className={`w-6 h-6 rounded-full flex items-center justify-center `}
-                  style={{ background: color }}
-                  onClick={() => setSelectedColor(color)}
-                >
-                  {selectedColor === color && (
-                    <FaCheck className="w-2 h-2 text-white" />
-                  )}
-                </button>
-              ))}
-            </div>
+            <SelectColors colors={colors} />
           </div>
           <hr />
-
-          <div className="mb-4">
-            <h4 className="font-medium text-gray-400 my-4 mb-2">Choose Size</h4>
-            <div className="flex gap-2 flex-wrap">
-              {sizes.map((size) => (
-                <button
-                  key={size}
-                  onClick={() => setSelectedSize(size)}
-                  className={`px-4 py-2 rounded-full border text-sm font-medium text-gray-300 ${
-                    selectedSize === size
-                      ? "bg-black text-white "
-                      : "bg-gray-100 text-gray-800"
-                  }`}
-                >
-                  {size}
-                </button>
-              ))}
-            </div>
-          </div>
+          <h4 className="font-medium text-gray-400 my-4 mb-2">Choose Size</h4>  
+          <SelectSize sizes={sizes} />
           <hr />
           <div className="flex sm:flex-row gap-4 items-center mt-6">
             <div className="flex items-center border rounded-full px-4 py-2">
@@ -115,9 +84,7 @@ function ProductDetail({ rating = 5 }) {
                 <FaPlus size={12} />
               </button>
             </div>
-            <button className="bg-black text-white px-8 py-3 rounded-full lg:w-96 w-full sm:w-24 ">
-              Add to Cart
-            </button>
+          <Button text="Add to Cart"/>
           </div>
         </div>
       </div>

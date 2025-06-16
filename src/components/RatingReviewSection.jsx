@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaFilter } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { reviews } from "../data/Reviews";
 import Reviews from "../components/Reviews";
@@ -25,7 +24,7 @@ function RatingReviewSection() {
 
             <div className="flex items-center space-x-4">
               <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-50">
-                <FaFilter className="w-4 h-4 text-black" />
+                <img src="/filter.svg" alt="filter" className="w-4 h-4 text-black" />
               </button>
 
               <div className="relative">

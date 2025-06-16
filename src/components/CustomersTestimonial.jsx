@@ -7,7 +7,7 @@ export default function CustomersTestimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
 
-  const cardWidth = 320;
+  const cardWidth = 350;
   const cardGap = 16;
   const scrollStep = cardWidth + cardGap;
 
