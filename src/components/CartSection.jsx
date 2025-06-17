@@ -7,8 +7,8 @@ function CartSection({ products }) {
   return (
     <>
       <div className="w-full">
-        <h2 className="flex font-IntegralBold text-3xl mx-6 mb-4">YOUR CART</h2>
-        <div className="flex flex-col lg:flex-row mx-6">
+        <h2 className="flex font-IntegralBold lg:ml-40 text-3xl mx-6 mb-4">YOUR CART</h2>
+        <div className="flex flex-col mb-10 lg:flex-row mx-6">
           <div className="w-full lg:w-3/5">
             <div className="border rounded-lg shadow-md p-4 lg:ml-36">
               {products.map((product) => (

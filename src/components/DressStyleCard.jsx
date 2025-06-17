@@ -4,12 +4,12 @@ export default function DressStyleCard({ product }) {
   return (
     <Link to={`/product-category/${product.id}`}>
         <div
-          className={`relative bg-gray-100 flex-shrink-0 rounded-2xl  mb-3 overflow-hidden`}
+          className={`relative bg-gray-100 flex-shrink-0 rounded-2xl overflow-hidden`}
         >
           <img
             src={product.image}
             alt={product.name}
-            className="w-[400px] h-[250px] object-cover transition-transform duration-300 group-hover:scale-105"
+            className="w-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
         <h3 className="font-medium text-sm mb-1">{product.name}</h3>

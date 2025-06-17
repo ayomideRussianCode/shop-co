@@ -3,7 +3,7 @@ export default function CartCards({ product }) {
   console.log(product, "checking");
 
   return (
-    <div className="flex gap-4 items-start mb-4 border-b pb-4">
+    <div className="flex gap-4 items-start  mb-4 border-b pb-4">
       <img
         src={product.image}
         alt={product.name}

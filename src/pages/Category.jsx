@@ -13,7 +13,7 @@ function Category() {
     <>
     <TopBar/>
     <NavBar/>
-    <Breadcrumbs items={breadcrumbs}/>
+    <Breadcrumbs className="hidden sm:block" items={breadcrumbs}/>
     <ProductCategory/>
     <Footer/>
     </>

@@ -5,89 +5,117 @@ import SelectColors from "../components/SelectColors";
 import SelectSize from "../components/SelectSize";
 import Button from "../components/Button";
 import DressStyleSection from "../components/DressStyleSection";
+import PriceSlider from "./PriceSlider";
 import { Casual } from "../data/Style";
 
 function ProductCategory() {
-  const [showFilters, setShowFilters] = useState(false); // For mobile toggle
-
   const categories = ["T-shirts", "Shorts", "Shirts", "Hoodie", "Jeans"];
-  const styles = ["Casual", "Formal", "Party", "Gym"];
+  const styles = ["T-shirts", "Shorts", "Shirts", "Hoodie", "Jeans"];
+  const [showDressStyle, setShowDressStyle] = useState(false);
+
   const colors = [
-    "#00FF00", "#FF0000", "#ffff00", "#ffa500", "#ADD8E6",
-    "#0000ff", "#800080", "#FF1493", "#ffffff", "#000000",
+    "#00FF00",
+    "#FF0000",
+    "#ffff00",
+    "#ffa500",
+    "#ADD8E6",
+    "#0000ff",
+    "#800080",
+    "#FF1493",
+    "#ffffff",
+    "#000000",
   ];
   const sizes = [
-    "XX-Small", "X-Small", "Small", "Medium", "Large",
-    "X-Large", "XX-Large", "3X-Large", "4X-Large",
+    "XX-Small",
+    "X-Small",
+    "Small",
+    "Medium",
+    "Large",
+    "X-Large",
+    "XX-Large",
+    "3X-Large",
+    "4X-Large",
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row">
-      {/* Filter Toggle Button for Mobile */}
-      <div className="lg:hidden flex justify-end items-center p-4">
-        <button
-          className="bg-black text-white px-4 py-2 rounded"
-          onClick={() => setShowFilters(!showFilters)}
-        >
-          {showFilters ? "Hide Filters" : "Show Filters"}
-        </button>
+    <>
+      <div className="flex flex-col sm:flex-row gap-6 px-4 mt-6">
+  {/* Filters */}
+  <div className="sm:w-2/5">
+    {showDressStyle && (
+      <div className="block sm:hidden">
+        <DressStyleSection
+          products={Casual}
+          onBackToFilters={() => setShowDressStyle(false)}
+        />
       </div>
+    )}
 
-      {/* Sidebar - Show on desktop, toggle on mobile */}
-      <div
-        className={`
-          ${showFilters ? "block" : "hidden"} 
-          lg:block w-full lg:w-64 bg-white shadow-md p-4 rounded-md
-        `}
-      >
-        <div className="flex justify-between items-center mb-4">
-          <h1 className="text-lg font-semibold text-black">Filters</h1>
-          <img src="/filter.svg" alt="filter" className="w-5 h-5" />
+    {!showDressStyle && (
+      <div className="p-2 border-b border-t mb-8 mt-4 border-gray-100 w-full h-full bg-white shadow-md rounded-lg">
+        <div className="flex justify-between">
+          <h1 className="text-black">Filters</h1>
+          <button
+            onClick={() => setShowDressStyle(true)}
+            className="sm:hidden"
+          >
+            <img src="/close-icon.svg" alt="close" className="w-6 h-6" />
+          </button>
         </div>
 
+        {/* Price */}
+        <hr className="my-4" />
         <CategoryList categories={categories} />
+        <hr className="my-4" />
+        <PriceSlider />
 
         {/* Colors */}
-        <hr className="my-4" />
-        <div>
-          <div className="flex justify-between items-center">
-            <h4 className="font-medium text-black">Colors</h4>
-            <FiChevronUp />
+        <div className="mb-4">
+          <div className="flex justify-between">
+            <h4 className="font-medium text-black my-4 mb-2">Colors</h4>
+            <button>
+              <FiChevronUp />
+            </button>
           </div>
           <SelectColors colors={colors} />
         </div>
 
-        {/* Sizes */}
-        <hr className="my-4" />
-        <div>
-          <div className="flex justify-between items-center">
-            <h4 className="font-medium text-black">Size</h4>
+        {/* Size */}
+        <hr className="my-2" />
+        <div className="flex justify-between mb-2">
+          <h4 className="font-medium text-black my-4">Size</h4>
+          <button>
             <FiChevronUp />
-          </div>
-          <SelectSize sizes={sizes} />
+          </button>
         </div>
+        <SelectSize sizes={sizes} />
 
-        {/* Dress Style */}
+        {/* Dress style */}
         <hr className="my-4" />
-        <div>
-          <div className="flex justify-between items-center">
-            <h4 className="font-medium text-black">Dress Style</h4>
+        <div className="flex justify-between mb-2">
+          <h1 className="text-black font-medium">Dress style</h1>
+          <button>
             <FiChevronUp />
-          </div>
-          <CategoryList categories={styles} />
+          </button>
         </div>
+        <CategoryList categories={styles} />
 
         <Button
-          className="w-full mt-4"
+          className="flex justify-center w-48 h-10 items-center my-2 mx-auto"
           text="Apply Filter"
         />
       </div>
+    )}
+  </div>
 
-      {/* Products Section */}
-      <div className="w-full lg:ml-4 p-4">
-        <DressStyleSection products={Casual} />
-      </div>
-    </div>
+  {/* Product Display */}
+  <div className="hidden sm:block sm:w-3/5">
+    <DressStyleSection products={Casual} />
+  </div>
+</div>
+
+
+    </>
   );
 }
 
