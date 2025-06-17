@@ -8,7 +8,6 @@ export default {
         IntegralReg: ["Integral-reg"],
         IntegralBold: ["Integral-bold"],
         Satoshi: ["Satoshi"],
-        Poppins:["Poppins"],
       },
     },
   },
