@@ -21,8 +21,7 @@ export default function DressStyleSection({ products, onBackToFilters }) {
         ))}
       </div>
 
-      <div className="text-center mt-4">
-      </div>
+      <div className="text-center mt-4"></div>
     </div>
   );
 }
