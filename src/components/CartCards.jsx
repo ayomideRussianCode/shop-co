@@ -1,9 +1,9 @@
-
+import QtyButton
+ from "./QtyButton";
 export default function CartCards({ product }) {
-  console.log(product, "checking");
 
   return (
-    <div className="flex gap-4 items-start  mb-4 border-b pb-4">
+    <div className="flex gap-4 items-start mb-4 border-b pb-4">
       <img
         src={product.image}
         alt={product.name}
@@ -23,7 +23,10 @@ export default function CartCards({ product }) {
           <p>Color: <span className="font-medium">{product.color}</span></p>
         </div>
 
-        <div className="mt-2 text-black font-semibold">${product.price}</div>
+     <div className="flex justify-between">
+         <p className="mt-2 text-black font-semibold">${product.price}</p>
+        <QtyButton />
+     </div>
       </div>
     </div>
   );

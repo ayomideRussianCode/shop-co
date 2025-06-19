@@ -1,12 +1,11 @@
 import { useState } from "react";
 import StarIcon from "../components/StarIcon";
-import { FaMinus, FaPlus } from "react-icons/fa";
 import SelectSize from "../components/SelectSize";
 import SelectColors from "../components/SelectColors";
+import QtyButton from "./QtyButton";
 import Button from "../components/Button";
 
 function ProductDetail({ rating = 5 }) {
-  const [quantity, setQuantity] = useState(1);
   const colors = ["#4F4631", "#314F4A", "#31344F"];
   const [mainImage, setMainImage] = useState("/main.png");
   const sizes = ["Small", "Medium", "Large", "X-Large"];
@@ -75,15 +74,7 @@ function ProductDetail({ rating = 5 }) {
           <SelectSize sizes={sizes} />
           <hr />
           <div className="flex sm:flex-row gap-4 items-center mt-6">
-            <div className="flex items-center border rounded-full px-4 py-2">
-              <button onClick={() => setQuantity((q) => Math.max(1, q - 1))}>
-                <FaMinus size={12} />
-              </button>
-              <span className="mx-4">{quantity}</span>
-              <button onClick={() => setQuantity((q) => q + 1)}>
-                <FaPlus size={12} />
-              </button>
-            </div>
+           <QtyButton/>
           <Button text="Add to Cart"/>
           </div>
         </div>

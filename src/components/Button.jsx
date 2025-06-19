@@ -1,4 +1,4 @@
-function Button({ text, className = "", onClick, ...props }) {
+function Button({ text, className = "", onClick, children , ...props}) {
   return (
     <button
       onClick={onClick}
@@ -6,6 +6,7 @@ function Button({ text, className = "", onClick, ...props }) {
       {...props}
     >
       {text}
+      {children}
     </button>
   );
 }

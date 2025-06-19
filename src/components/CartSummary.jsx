@@ -1,51 +1,56 @@
-import Button from "../components/Button";
+import { GoArrowRight } from "react-icons/go";
+// import { Button } from "../components/Button";   ;
 
 function CartSummary({ orderDetails }) {
   return (
-    <>
-      <div className="w-full lg:w-2/5">
-        <div className="flex mt-6 border flex-row justify-between rounded-md shadow-md mx-2 mb-10 lg:mx-6">
-          <div className="p-4">
-            <h2 className="text-lg text-black font-semibold pb-4 ">
-              Order Summary
-            </h2>
-            {orderDetails.map((orderDetail, index) => (
-              <div className="flex justify-between" key={index}>
-                <div className="flex-col text-gray-600">
-                  <p className="pb-3">SubTotal: </p>
-                  <p className="pb-3">Discount(-20%): </p>
-                  <p className="pb-3">Delivery: </p>
-                  <p className="pb-3">Total</p>
-                </div>
-                <div className="flex flex-col pl-44 lg:pl-72 font-bold">
-                  <p className="pb-3">${orderDetail.subtotal}</p>
-                  <p className="text-red-500 pb-3">-${orderDetail.discount}</p>
-                  <p className="pb-3">${orderDetail.delivery}</p>
-                  <p className="pb-3">${orderDetail.total}</p>
-                </div>
-              </div>
-            ))}
-            <div className="flex gap-2">
-              {/* <img src="/promo-code-tag.svg" alt="tag" className="w-4 h-4text-gray-500 mr-2"/> */}
-              <input
-                className="bg-[#f0f0f0] rounded-full px-8 py-2 text-xs text-gray-600"
-                type="number"
-                placeholder="Add promo code"
-              />
-              <button className="bg-black rounded-full px-6 py-2 text-white">
-                Apply
-              </button>
+    <div className="w-full lg:w-2/5 px-4">
+      <div className="bg-white border rounded-xl shadow-md p-6 mt-6">
+        <h2 className="text-lg text-black font-semibold mb-4">Order Summary</h2>
+
+        {orderDetails.map((detail, index) => (
+          <div key={index} className="space-y-3 text-sm text-gray-700">
+            <div className="flex justify-between">
+              <span>Subtotal:</span>
+              <span className="font-bold text-black text-md">${detail.subtotal}</span>
             </div>
-            <div className="flex justify-center py-4">
-              <Button
-                className="text-white w-full"
-                text="Go to Checkout"
-              ></Button>
+            <div className="flex justify-between">
+              <span>Discount (-20%):</span>
+              <span className="font-bold text-red-500 text-md">-${detail.discount}</span>
+            </div>
+            <div className="flex justify-between ">
+              <span>Delivery:</span>
+              <span className="font-bold text-black text-md">${detail.delivery}</span>
+            </div>
+            <div className="flex justify-between border-t pt-3 font-bold">
+              <span>Total:</span>
+              <span className="font-bold text-black text-md">${detail.total}</span>
             </div>
           </div>
+        ))}
+
+        <div className="relative mt-6 gap-2 flex items-center">
+          <img
+            src="/promo-code-tag.svg"
+            alt="tag"
+            className="w-4 h-4 absolute left-3 text-gray-500"
+          />
+          <input
+            className="bg-[#f0f0f0] text-xs text-gray-600 rounded-full pl-10 pr-24 py-2 w-full"
+            type="text"
+            placeholder="Add promo code"
+          />
+          <button className=" bg-black text-white px-4 py-1.5 text-xs rounded-full">
+            Apply
+          </button>
         </div>
+
+        {/* <div className="mt-6">
+          <Button className="text-white" text="Go to Checkout">
+            <GoArrowRight size={12} />
+          </Button>
+        </div> */}
       </div>
-    </>
+    </div>
   );
 }
 

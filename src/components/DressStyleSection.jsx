@@ -1,5 +1,5 @@
 import DressStyleCard from "../components/DressStyleCard";
-import { GoArrowLeft , GoArrowRight} from "react-icons/go";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 // import { FiChevronDown } from "react-icons/fi";
 
 export default function DressStyleSection({ products, onBackToFilters }) {
@@ -41,8 +41,7 @@ export default function DressStyleSection({ products, onBackToFilters }) {
           <p className="text-gray-400 text-lg ">1 2 3 ... 8 9 10</p>
           <button className="rounded-md flex gap-2 border-gray-200 border px-6 ">
             {" "}
-          
-            Next   <GoArrowRight size={15} className="flex  " />
+            Next <GoArrowRight size={15} className="flex  " />
           </button>{" "}
         </div>
       </div>
