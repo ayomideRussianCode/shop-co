@@ -3,7 +3,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { reviews } from "../data/Reviews";
 import Reviews from "../components/Reviews";
 import ProductDetails from "../components/ProductDetail";  
-import FAQs from "../components/FAQs";  
+import FAQs from "./Faqs";
 
 function RatingReviewSection() {
   const [selectedTab, setSelectedTab] = useState("rating");

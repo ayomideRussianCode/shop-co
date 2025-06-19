@@ -1,9 +1,8 @@
-import React from 'react'
 
-function Faqs() {
+function FAQs() {
   return (
-    <div>Faqs</div>
+    <div>FAQs</div>
   )
 }
 
-export default Faqs
+export default FAQs
