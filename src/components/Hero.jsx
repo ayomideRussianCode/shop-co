@@ -64,7 +64,7 @@ const Hero = () => {
               src={homepageImg}
               alt="models"
             />
-            {/* <img className="absolute top-30" src="/big-star.svg" alt="" /> */}
+            <img className="absolute top-30" src="/big-star.svg" alt="" />
           </div>
         </div>
       </div>
