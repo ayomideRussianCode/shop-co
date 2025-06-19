@@ -1,5 +1,4 @@
 import { GoArrowRight } from "react-icons/go";
-// import { Button } from "../components/Button";   ;
 
 function CartSummary({ orderDetails }) {
   return (
@@ -44,11 +43,11 @@ function CartSummary({ orderDetails }) {
           </button>
         </div>
 
-        {/* <div className="mt-6">
-          <Button className="text-white" text="Go to Checkout">
-            <GoArrowRight size={12} />
-          </Button>
-        </div> */}
+        <div className="  flex justify-center mt-6">
+          <button className=" flex  w-full justify-center text-md text-white bg-black py-2 px-4 rounded-full">
+           Go to Checkout  <GoArrowRight className="  w-5 h-6 " />
+          </button>
+        </div>
       </div>
     </div>
   );
