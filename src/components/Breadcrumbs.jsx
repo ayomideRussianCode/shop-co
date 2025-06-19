@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Breadcrumbs({ items = [], className = "" }) {
   return (
     <nav
-      className={`text-sm max-w-7xl flex mx-auto text-gray-600 p-6 ${className}`}
+      className={`text-sm lg:ml-24 flex text-gray-600 p-6 ${className}`}
       aria-label="Breadcrumb"
     >
       <ol className="flex items-center space-x-1">

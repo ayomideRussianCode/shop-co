@@ -2,7 +2,7 @@ import { FiMail } from "react-icons/fi";
 
 function NewsLetter() {
   return (
-    <div className="relative z-10 -mb-20 ">
+    <div className="relative z-10 -mb-20 mt-20">
       <div className="bg-black rounded-lg p-6 mx-4 flex flex-col lg:flex-row justify-between lg:mx-20 shadow-lg">
         <h2 className="font-IntegralBold text-white text-3xl mb-6 lg:mb-0 lg:w-1/2">
           STAY UP TO DATE ABOUT OUR LATEST OFFERS
