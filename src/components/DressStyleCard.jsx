@@ -14,17 +14,7 @@ export default function DressStyleCard({ product }) {
         </div>
         <h3 className="font-medium text-sm mb-1">{product.name}</h3>
         <div className="flex items-center mb-1">
-          <div className="flex text-yellow-400">
-            {[...Array(5)].map((_, i) => (
-              <StarIcon
-                key={i}
-                filled={i < Math.floor(product.rating)}
-                halfFilled={
-                  i === Math.floor(product.rating) && product.rating % 1 >= 0.5
-                }
-              />
-            ))}
-          </div>
+        <StarIcon rating={product.rating}/>
           <span className="text-xs text-gray-500 ml-1">
             {product.ratingCount}
           </span>

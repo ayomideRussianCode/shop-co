@@ -41,7 +41,7 @@ function RatingReviewSection() {
                 </button>
 
                 {isDropdownOpen && (
-                  <div className="absolute right-0 mt-1 w-32 bg-white border border-gray-200 rounded-md shadow-lg z-10">
+                  <div className="absolute  right-0 mt-1 w-32 bg-white border border-gray-200 rounded-md shadow-lg z-10  hidden sm:block ">
                     <div className="py-1">
                       <button
                         onClick={() => {

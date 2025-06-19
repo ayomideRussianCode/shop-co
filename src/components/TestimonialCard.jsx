@@ -1,16 +1,17 @@
 import StarIcon from "../components/StarIcon";
 import {FaCheckCircle} from 'react-icons/fa';
-function TestimonialCard({ name, verified = true, rating = 5, text }) {
+function TestimonialCard({ name, verified = true, text }) {
   return (
     <div>
       <div className="border border-gray-200 rounded-lg p-5  mb-10 transition-shadow">
         <div className="flex flex-col space-y-2">
           <div className="flex space-x-1">
-            {Array(5)
+            <StarIcon rating={5.0}/>
+            {/* {Array(5)
               .fill(0)
               .map((i) => (
                 <StarIcon key={i} filled={i < rating}/>
-              ))}
+              ))} */}
           </div>
           <div className="flex ">
             {name}

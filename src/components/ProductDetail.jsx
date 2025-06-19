@@ -5,7 +5,7 @@ import SelectColors from "../components/SelectColors";
 import QtyButton from "./QtyButton";
 import Button from "../components/Button";
 
-function ProductDetail({ rating = 5 }) {
+function ProductDetail() {
   const colors = ["#4F4631", "#314F4A", "#31344F"];
   const [mainImage, setMainImage] = useState("/main.png");
   const sizes = ["Small", "Medium", "Large", "X-Large"];
@@ -44,11 +44,12 @@ function ProductDetail({ rating = 5 }) {
             ONE LIFE GRAPHIC T-SHIRT
           </h1>
           <div className="flex items-center gap-1 text-yellow-500">
-            {Array(5)
+            {/* {Array(5)
               .fill(0)
               .map((i) => (
                 <StarIcon key={i} filled={i < rating} />
-              ))}
+              ))} */}
+               <StarIcon rating={4.5}/>
             <span className="ml-2 text-black text-sm">4.5/5</span>
           </div>
           <div className="flex items-center gap-4 my-2">

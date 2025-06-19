@@ -1,10 +1,18 @@
-import {FaStar, FaRegStar, FaStarHalfAlt} from "react-icons/fa";
+function StarIcon({ rating }) {
+  const roundedVal = Math.ceil(rating);
 
-export default function StarIcon({filled, halfFilled, size = 12 }) {
-  const className = 'text-yellow-400';
-
-  if (filled) return <FaStar className={className} size={size}/>;
-  if (halfFilled) return <FaStarHalfAlt className={className} size={size}/>;
-  return <FaRegStar className="text-gray-300" size={size}/>;
+  return (
+    <div className="flex gap-1 items-center">
+      {Array.from({ length: roundedVal }).map((item, index) => (
+        <img
+          key={index}
+          src={index < Math.floor(rating) ? "/star-filled.svg" : "/star-unfilled.svg"}
+          alt="star"
+          className="w-4 h-4"
+        />
+      ))}
+    </div>
+  );
 }
 
+export default StarIcon;

@@ -7,16 +7,18 @@ import HomePage from "./pages/HomePage.jsx";
 import ProductDetailPage from "./pages/ProductDetailPage.jsx";
 import Category from "./pages/Category.jsx";
 import Cart from "./pages/Cart.jsx";
+import Stars from "./pages/Stars.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Router>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product-detail/:id" element={<ProductDetailPage />} />
         <Route path="/product-category" element={<Category />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/stars" element={<Stars />} />
       </Routes>
     </Router>
   </StrictMode>
