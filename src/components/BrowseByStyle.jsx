@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function BrowseByStyle() {
   return (
     <div>
@@ -7,23 +9,25 @@ function BrowseByStyle() {
             BROWSE BY DRESS STYLE
           </h2>
 
-          <div className="flex flex-col md:flex-row gap-4 py-4">
-            <div>
-              <img src="/casual.png" alt="casual-style" />
+          <Link to="/product-category">
+            <div className="flex flex-col md:flex-row gap-4 py-4">
+              <div>
+                <img src="/casual.png" alt="casual-style" />
+              </div>
+              <div>
+                <img src="/formal.png" alt="formal-style" />
+              </div>
             </div>
-            <div>
-              <img src="/formal.png" alt="formal-style" />
-            </div>
-          </div>
 
-          <div className="flex flex-col md:flex-row gap-4">
-            <div>
-              <img src="/party.png" alt="party-style" />
+            <div className="flex flex-col md:flex-row gap-4">
+              <div>
+                <img src="/party.png" alt="party-style" />
+              </div>
+              <div>
+                <img src="/gym.png" alt="gym-style" />
+              </div>
             </div>
-            <div>
-              <img src="/gym.png" alt="gym-style" />
-            </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

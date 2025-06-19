@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiShoppingCart, FiSearch, FiMenu } from "react-icons/fi";
 import { FaRegUserCircle } from "react-icons/fa";
 import MobileMenu from "./MobileMenu";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,7 +25,7 @@ const Navbar = () => {
           >
             <FiMenu size={22} />
           </button>
-          <img src="/shopco.svg" alt="logo"/>
+          <img src="/shopco.svg" alt="logo" />
         </div>
         <nav className="hidden  md:flex space-x-6 text-gray-700 font-medium">
           <a href="#">Shop</a>
@@ -76,7 +77,10 @@ const Navbar = () => {
             />
             <FiSearch className="absolute top-0.5 left-4 translate-y-1/2 text-gray-400 text-lg" />
           </div>
-          <FiShoppingCart size={20} />
+          <Link to={`/cart`}>
+            {" "}
+            <FiShoppingCart size={20} />
+          </Link>
           <FaRegUserCircle size={20} />
         </div>
         {isMobileMenuOpen && (
