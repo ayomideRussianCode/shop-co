@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <div className="">
       <div className="flex flex-col lg:flex-row bg-[#F2F0F1]">
-        <div className="md:w-1/2 px-10 py-10 lg:px-20 lg:py-32  ">
+        <div className="md:w-1/2 px-10 py-10 lg:px-20 lg:py-32">
           <div className="flex flex-wrap">
             <h1 className=" text-4xl lg:text-5xl font-Satoshi md:font-IntegralBold font-black mb-4">
               FIND CLOTHES THAT MATCHES YOUR STYLE

@@ -5,7 +5,7 @@ export default function ProductSection({ title, products }) {
     <div className="mb-16">
       <h2 className="text-3xl font-IntegralBold my-4 text-center sm:flex-wrap mb-8">{title}</h2>
       
-      <div className="flex space-x-4 overflow-x-auto justify-center items-center sm:grid sm:grid-cols-2 lg:grid-cols-4 mx-12">
+      <div className="flex flex-row lg:space-x-4 justify-center items-center mx-0 lg:mx-12  ">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

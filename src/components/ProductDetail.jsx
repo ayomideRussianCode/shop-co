@@ -30,7 +30,7 @@ function ProductDetail() {
 
           <div className="flex-1 flex mt-4 lg:mr-6 justify-center">
             <img
-              className="rounded-lg w-[300px] h-[345px] flex-shrink-0   "
+              className="rounded-lg w-[300px] h-[345px] flex-shrink-0"
               src={mainImage}
               alt="main-img"
             />
@@ -44,11 +44,6 @@ function ProductDetail() {
             ONE LIFE GRAPHIC T-SHIRT
           </h1>
           <div className="flex items-center gap-1 text-yellow-500">
-            {/* {Array(5)
-              .fill(0)
-              .map((i) => (
-                <StarIcon key={i} filled={i < rating} />
-              ))} */}
                <StarIcon rating={4.5}/>
             <span className="ml-2 text-black text-sm">4.5/5</span>
           </div>

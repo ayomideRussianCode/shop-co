@@ -5,12 +5,12 @@ export default function ProductCard({ product }) {
     <Link to={`/product-detail/${product.id}`}>
       <div className="group">
         <div
-          className={`relative bg-gray-100 rounded-2xl mb-3 aspect-[3/4] overflow-hidden`}
+          className={`relative rounded-2xl mb-3 overflow-hidden`}
         >
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className=" w-20 h-20 lg:w-80 lg:h-80 object-fit transition-transform duration-300 group-hover:scale-105"
           />
         </div>
 
@@ -24,7 +24,7 @@ export default function ProductCard({ product }) {
         </div>
 
         <div className="flex items-center">
-          <span className="font-bold text-sm mr-2">${product.price}</span>
+          <span className="font-bold text-sm ">${product.price}</span>
           {product.originalPrice && (
             <span className="text-sm text-gray-500 line-through">
               ${product.originalPrice}
