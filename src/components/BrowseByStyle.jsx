@@ -11,7 +11,7 @@ function BrowseByStyle() {
 
           <Link to="/product-category">
           <div>
-              <div className="flex flex-col md:flex-row  gap-4 py-4">
+              <div className="flex flex-col justify-center md:flex-row  gap-4 py-4">
               <div>
                 <img src="/casual.png" alt="casual-style" />
               </div>
@@ -20,7 +20,7 @@ function BrowseByStyle() {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col justify-center md:flex-row gap-4">
               <div>
                 <img src="/party.png" alt="party-style" />
               </div>
