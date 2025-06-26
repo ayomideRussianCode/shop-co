@@ -9,7 +9,6 @@ const Navbar = () => {
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const handleSearch = () => {
-    console.log("Search for:", searchTerm);
   };
 
   return (

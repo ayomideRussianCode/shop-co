@@ -24,12 +24,14 @@ const Hero = () => {
             <h1 className=" text-4xl lg:text-5xl font-Satoshi md:font-IntegralBold font-black mb-4">
               FIND CLOTHES THAT MATCHES YOUR STYLE
             </h1>
-            <p className="text-sm text-[#000000] mb-6">
+          </div>
+          <div className="w-full">
+             <p className="text-sm text-[#000000] mb-6">
               Browse through our diverse range of meticulously crafted garments,
               designed to bring out your individuality and cater to your sense
               of style.
             </p>
-            <button className="bg-black lg:w-56 w-full items-center text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
+            <button className="bg-black lg:w-56  w-60 items-center text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
               Shop Now
             </button>
             <div>
@@ -57,10 +59,10 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="">
-          <div className="h-[523px] relative">
+        <div className="lg:w-1/2 ">
+          <div className=" relative">
             <img
-              className="w-full h-full object-cover"
+              className="w-[1000px] h-[630px] object-cover"
               src={homepageImg}
               alt="models"
             />

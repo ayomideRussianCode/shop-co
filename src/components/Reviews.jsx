@@ -13,13 +13,6 @@ export default function RatingReviewSection() {
           >
             <div className="flex items-start justify-between mb-4">
               <StarIcon rating={review.rating}/>
-              {/* <div className="flex space-x-1">
-                {Array(5)
-                  .fill(0)
-                  .map((i) => (
-                    <StarIcon key={i} filled={i < rating} />
-                  ))}
-              </div>{" "} */}
               <button className="text-gray-400 hover:text-gray-600">
                 <MoreHorizontal className="w-5 h-5" />
               </button>

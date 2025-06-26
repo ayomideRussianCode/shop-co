@@ -7,11 +7,6 @@ function TestimonialCard({ name, verified = true, text }) {
         <div className="flex flex-col space-y-2">
           <div className="flex space-x-1">
             <StarIcon rating={5.0}/>
-            {/* {Array(5)
-              .fill(0)
-              .map((i) => (
-                <StarIcon key={i} filled={i < rating}/>
-              ))} */}
           </div>
           <div className="flex ">
             {name}
