@@ -1,7 +1,7 @@
  export const reviews = [
     {
       id: 1,
-      name: "Samantha D.",
+      name: "Samantha D.F",
       rating: 4.5,
       verified: true,
       review:
